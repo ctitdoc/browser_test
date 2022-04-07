@@ -1,0 +1,97 @@
+[
+  {
+    "url_prefix": "&url_prefix_fo_ch;",
+    "country" : "ch",
+    "idmembre": "110133574726",
+    "member_login": "f.delahaye+mpz@bilendi.com",
+    "iban": "AT152070604400108009",
+    "bic": "KSPKAT2KXXX",
+    "credit_amount": "15",
+    "credit_amount_with_decimal": "15.00",
+    "bank_file_format": "SEPA"
+  },
+  {
+    "url_prefix": "&url_prefix_fo_ch;",
+    "country" : "ch",
+    "idmembre": "110119484368",
+    "member_login": "rhaldemann247@gmail.com",
+    "iban": "CH2100235235982041510",
+    "bic": "UBSWCHZH80A",
+    "credit_amount": "15",
+    "credit_amount_with_decimal": "15.00",
+    "bank_file_format": "SPS"
+
+  },
+  {
+    "url_prefix": "&url_prefix_fo_at;",
+    "country" : "at",
+    "idmembre": "110014578128",
+    "member_login": "nina.sagernik@gmx.at",
+    "iban": "AT152070604400108009",
+    "bic": "KSPKAT2KXXX",
+    "credit_amount": "15",
+    "credit_amount_with_decimal": "15.00",
+    "bank_file_format": "SEPA"
+
+  },
+  {
+    "url_prefix": "&url_prefix_fo_at;",
+    "country" : "at",
+    "idmembre": "110114676522",
+    "member_login": "treffli@gmail.com",
+    "iban": "DE18100110012624492600",
+    "bic": "NTSBDEB1XXX",
+    "credit_amount": "15",
+    "credit_amount_with_decimal": "15.00",
+    "bank_file_format": "SEPA"
+
+  },
+  {
+    "url_prefix": "&url_prefix_fo_de;",
+    "country" : "de",
+    "idmembre": "110031740362",
+    "member_login": "robert.honeiser@t-online.de",
+    "iban": "DE14500105173359671282",
+    "bic": "BELADEBEXXX",
+    "credit_amount": "15",
+    "credit_amount_with_decimal": "15.00",
+    "bank_file_format": "SEPA"
+
+  },
+  {
+    "url_prefix": "&url_prefix_fo_de;",
+    "country" : "de",
+    "idmembre": "110042018265",
+    "member_login": "roth.gitta@gmx.de",
+    "iban": "DE54870500004582029286",
+    "bic": "CHEKDE81XXX",
+    "credit_amount": "15",
+    "credit_amount_with_decimal": "15.00",
+    "bank_file_format": "SEPA"
+
+  },
+  {
+    "url_prefix": "&url_prefix_fo_de;",
+    "country" : "de",
+    "idmembre": "110082465461",
+    "member_login": "doreen_gleisinger@web.de",
+    "iban": "DE15303512200000536052",
+    "bic": "WELADE01HAA",
+    "credit_amount": "15",
+    "credit_amount_with_decimal": "15.00",
+    "bank_file_format": "SEPA"
+
+  },
+  {
+    "url_prefix": "&url_prefix_fo_de;",
+    "country" : "de",
+    "idmembre": "110087233102",
+    "member_login": "elvira.geppert@t-online.de",
+    "iban": "FR7613485008000414831664938",
+    "bic": "CEPAFRPP348",
+    "credit_amount": "15",
+    "credit_amount_with_decimal": "15.00",
+    "bank_file_format": "SEPA"
+
+  }
+]

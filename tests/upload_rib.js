@@ -1,0 +1,1 @@
+alert('Appuyez sur la touche <Return> sur la console pour fermer cette alerte\nPenser à uploader manuellement un RIB\npuis Appuyez sur le bouton "OK", puis Appuyez sur la touche <Return> sur la console');

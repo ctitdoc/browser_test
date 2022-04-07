@@ -1,0 +1,32 @@
+{
+  "page_bo_login": {
+    "titleContains": "BO",
+    "url": "&bo_url_prefix;",
+    "username": "&bo_user_login;",
+    "password": "&bo_user_password;",
+    "xpath_to_click": "//button[@type='submit'][1]"
+  },
+  "page_admin_menu": {
+    "xpath_to_click": "//li[contains(@class,'dropdown') and  contains(@class,'first')]//ul[contains(@class,'dropdown-menu') and contains(@class,'menu_level_1')]//preceding-sibling::a[@data-toggle='dropdown']"
+  },
+  "page_blacklist_bank_info": {
+    "xpath_to_click": "//a[@href='/bank-infos']"
+  },
+  "page_slider_panel": {
+    "xpath_to_click": "//a[@class='slider-panel-link']"
+  },
+  "page_slider_panel_generate_bankfiles": {
+    "xpath_to_click": "//*[@id='confirmationBlock']//span[@class='dx-button-text']"
+  },
+  "page_slider_panel_wait_for_bankfiles": {
+    "number_of_seconds" : 120
+  },
+  "page_slider_panel_get_generated_bankfiles_infos": {
+    "xpath_to_get" : "//*[@id='confirmationBlock']//dl[@id='sentFiles']/dt",
+    "bank_file_to_send_dir": "&bank_file_to_send_dir;",
+    "bank_file_sent_dir": "&bank_file_sent_dir_ch;"
+  },
+  "page_logout": {
+    "xpath_to_click": "//a[@href='/logout']"
+  }
+}

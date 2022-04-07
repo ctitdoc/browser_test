@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE json [
+
+        <!-- json contains json content with xml entities calls : this enables json code chunks (or values) to be
+        shared by others json chunks, thus making a basic json chunk reuse mechanism. -->
+
+        <!ELEMENT json (#PCDATA)>
+
+        <!-- a SYSTEM parameter xml entity references a file containing xml declarations (like element or entity declarations),
+        thus making a basic json DOCTYPE declarations reuse mechanism. -->
+        <!ENTITY % common_entities SYSTEM "mpz_fo.ent">
+        <!-- this SYSTEM parameter xml entity "call", includes the declarations of its file -->
+        %common_entities;
+
+        <!-- env related entities : an entity file common_env.ent should be created, yet not committed in git, with the following
+        entities :
+         <!ENTITY email "<put a default email value here to receive notifications from the test>">
+         <!ENTITY default_bo_user_login "<put a default bo user login here used to log into the BO>">
+         <!ENTITY default_bo_user_password "<put its password here>">
+        -->
+        <!ENTITY % common_env_entities SYSTEM "common_env.ent">
+        %common_env_entities;
+
+        <!-- scenario_values : this entity file is generated from its counter part scenario_values_template.ent for each
+        datas of a dataset; the generated entities are called in the scenario_testXXX entities below resulting in a fully
+        instanciated json scenario that can be executed by the proper testMethod coded in the Test class.
+        see https://redmine.bilendi.com/issues/72924#note-27
+        -->
+        <!ENTITY % scenario_values SYSTEM "BankFileTransferTest/scenario_values.ent">
+        %scenario_values;
+
+        <!-- scenario_testDefaultPendingTransferRequestCreationScenario : scenario of test method testDefaultPendingTransferRequestCreationScenario
+         see https://redmine.bilendi.com/issues/72924#note-27
+        this SYSTEM (non parameter) xml entity specify a file containing JIX content = JSON content with call to xml entities
+        -->
+        <!ENTITY scenario_testDefaultPendingTransferRequestCreationScenario SYSTEM "BankFileTransferTest/scenario_testDefaultPendingTransferRequestCreationScenario.json">
+        <!-- scenario_testDefaultBankfileGenerationScenario : scenario of test method scenario_testDefaultBankfileGenerationScenario -->
+        <!ENTITY scenario_testDefaultBankfileGenerationScenario SYSTEM "BankFileTransferTest/scenario_testDefaultBankfileGenerationScenario.json">
+
+        <!-- shared selectors used in scenarios -->
+        <!ENTITY % mpz_shared_selectors SYSTEM "MpzSharedScenario/mpz_shared_selectors.ent">
+        %mpz_shared_selectors;
+
+        <!--- shared scenario components : -->
+        <!ENTITY % mpz_shared_scenarios SYSTEM "MpzSharedScenario/mpz_shared_scenarios.ent">
+        %mpz_shared_scenarios;
+
+        ]>
+<json>
+    {
+    "step_by_step" : false,
+    "dsn" : {
+              "dbcon_mpz_at":"&dbcon_mpz_at;",
+              "dbcon_mpz_ch":"&dbcon_mpz_ch;",
+              "dbcon_mpz_de":"&dbcon_mpz_de;"
+            },
+    "scenarios" : [],
+    <!-- this "call" to scenario_testDefaultPendingTransferRequestCreationScenario replaces this call by its content when
+    this xml file is parsed for example to be loaded as a DOM Document -->
+    "scenario_testDefaultPendingTransferRequestCreationScenario" : &scenario_testDefaultPendingTransferRequestCreationScenario;,
+    "scenario_testDefaultBankfileGenerationScenario" : &scenario_testDefaultBankfileGenerationScenario;
+    }
+</json>

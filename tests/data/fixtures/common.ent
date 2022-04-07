@@ -1,0 +1,8 @@
+<!-- entities commonly used in test fixtures -->
+
+<!ENTITY url_prefix "https://recette.ugc.fr">
+<!ENTITY rurl_page_acceuil "abonnementAccueil.html?origin=public">
+<!ENTITY rurl_offers_welcome_page "les-offres-ugc-illimite.html">
+<!-- tester should configure his/her test email here otherwise test will fail -->
+<!ENTITY email "f.delahaye@bilendi.com">
+

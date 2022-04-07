@@ -1,0 +1,59 @@
+{
+  "pageHome": {
+    "url": "&url_prefix;",
+    "titleContains": "UGC - HomePage",
+    "xpath_to_click": "//a[@href='&rurl_offers_welcome_page;'][1]"
+  },
+  "pageOffers": {
+    "titleContains": "UGC - Offres Illimité",
+    "xpath_to_click": "//a[@href='&rurl_page_acceuil;'][1]"
+  },
+  "page1_1": {
+    <!-- the test use titleContains to check that the title of the page contains this keyword -->
+    "titleContains": "Accueil",
+    "ui": "abonnementAccueilAction__valid",
+    &birth_date_fields;
+  },
+  "page1_2": {
+    "titleContains": "Parrainage",
+    "sponsorship": "false",
+    "offerId": "440"
+  },
+  "page2": {
+    "titleContains": "Abonné",
+    <!-- for Mr civility put 1 or Mrs put 2 -->
+    "civility": "1",
+    "lastname": "DONCOEUR",
+    "firstname": "Matthieu",
+    &birth_date_fields;,
+    "fixe" : "0123456789",
+    "mobile" : "0605040302",
+    "email" : "&email;",
+    "streetNumber" : "5",
+    <!-- Rue has id 1 -->
+    "streetTypeId" : "1",
+    "streetName" : "Gallice",
+    "zipCode" : "38000",
+    "city" : "Grenoble",
+    <!-- France has id 1 -->
+    "countryId" : "1"
+  },
+  "page3": {
+    "titleContains": "Payeur",
+    <!-- paymqent type 1 should be dbt but to be verified -->
+    "paymentType": "1",
+    "subscriberIsPayer": "true"
+  },
+  "page4": {
+    "titleContains": "Récapitulatif"
+  },
+  "page5": {
+    "titleContains": "Paiement"
+  },
+  "page6": {
+    "titleContains": "Signature"
+  },
+  "page6_2": {
+    "titleContains": "Confirmation"
+  }
+}

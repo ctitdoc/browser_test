@@ -1,0 +1,15 @@
+
+//a[@href='/survey/my-surveys'] => nav home page surveys
+//a[@href='/account/qualification'] => nav all qualif
+//div[contains(@class, 'card-block ')]//a[contains(@href,'/qualification/') and contains(@href,'/profile_thematics/intro?hash=')] => recuperer cette liste de a et pour chacun :
+  gotourl(@href);
+  0: initialiser une prédicat $answered à "false";
+  1: $control_element = //div[@class='question']//*[contains(@id,'qualification_currentPage_questions_') and contains(@id,'_answer') and not ($answered)][1];
+  2: recuperer son @id dans $id et le mettre dans $answered comme ça : $answered = $answered . " or @id=$id";
+  3: selon le contrôle (select, radio ...) : si aucun option n'est checked ou que c'est l'option 1 ('veuillez répondre'),
+     selectionner arbitrairement l'option du milieu => cela peut faire apparaitre de nouveaux contrôles
+        (pour les radio à deux choix laisser le choix checked s'il existe sinon checker le choix 1),
+        (pour les controles @data-date-format="mm/yyyy" mettre par defaut une date d'il y a 1.5 an ds le format indiqué);
+  4: rejouer depuis 1 tant que $control_element n'est pas vide;
+  si //*[@id='next'] existe, cliquer dessus et rejouer depuis 0;
+  si //a[@href=/qualification/close] existe, cliquer dessus;

@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>crt-trf:2022-02-01</MsgId>
+      <CreDtTm>2022-02-01T04:36:02+01:00</CreDtTm>
+      <NbOfTxs>47</NbOfTxs>
+      <CtrlSum>1165.28</CtrlSum>
+      <InitgPty>
+        <Nm>Bilendi GmbH</Nm>
+        <PstlAdr>
+          <PstCd>10719</PstCd>
+          <TwnNm>Berlin</TwnNm>
+          <Ctry>DE</Ctry>
+          <AdrLine>Uhlandstrasse 47</AdrLine>
+        </PstlAdr>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>payment:1270</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <PmtTpInf>
+        <SvcLvl>
+          <Cd>SEPA</Cd>
+        </SvcLvl>
+      </PmtTpInf>
+      <ReqdExctnDt>2022-02-01</ReqdExctnDt>
+      <Dbtr>
+        <Nm>Bilendi GmbH</Nm>
+        <PstlAdr>
+          <PstCd>10719</PstCd>
+          <TwnNm>Berlin</TwnNm>
+          <Ctry>DE</Ctry>
+          <AdrLine>Uhlandstrasse 47</AdrLine>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN>DE82100700240503003600</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BIC>DEUTDEDBBER</BIC>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74527:1</InstrId>
+          <EndToEndId>PB:2022-02-01:74527</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">17.49</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>INGBNL2A</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>HGJM Steenhof, Hauptstrasse 96, 4450 Sissach</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>NL15INGB0653416970</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131562</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74451:2</InstrId>
+          <EndToEndId>PB:2022-02-01:74451</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">24.80</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>NTSBDEB1XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Mladen Milicevic</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE93100110012622342021</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131563</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74416:3</InstrId>
+          <EndToEndId>PB:2022-02-01:74416</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">19.51</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>TUTNMK22</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>REJMOND RAMADAN</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>MK07210501627065148</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131564</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74415:4</InstrId>
+          <EndToEndId>PB:2022-02-01:74415</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">21.34</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>OTPVHUHB</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Lisa Manner</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>HU60117733460116060200000000</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131565</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74378:5</InstrId>
+          <EndToEndId>PB:2022-02-01:74378</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">42.87</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>TRWIBEB1XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Tina Grueber</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>BE82967019468468</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131566</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74350:6</InstrId>
+          <EndToEndId>PB:2022-02-01:74350</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">16.34</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>EVIULT2VXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Marouane Hammami</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>LT123500010007876217</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131567</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74349:7</InstrId>
+          <EndToEndId>PB:2022-02-01:74349</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">26.63</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>EVIULT2VXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Hammami marwen</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>LT523500010004389220</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131568</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74348:8</InstrId>
+          <EndToEndId>PB:2022-02-01:74348</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">51.14</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>EVIULT2VXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Marouane Hammami</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>LT743500010007872773</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131569</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74320:9</InstrId>
+          <EndToEndId>PB:2022-02-01:74320</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">15.57</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>STSABGSFXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Mariya Brugman</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>BG19STSA93000022889711</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131570</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74258:10</InstrId>
+          <EndToEndId>PB:2022-02-01:74258</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">59.79</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>CSDBDE71XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Koch</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE82760300800713819492</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131571</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74020:11</InstrId>
+          <EndToEndId>PB:2022-02-01:74020</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">17.30</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>DABADKKK</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Petya Masri</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DK1230003733380780</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131572</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74005:12</InstrId>
+          <EndToEndId>PB:2022-02-01:74005</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">17.59</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>GENODE61BSK</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Annemarie Sedelmeier</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE75684900000041494808</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131573</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74450:13</InstrId>
+          <EndToEndId>PB:2022-02-01:74450</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">26.14</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Maria Renata Barboza De Souza</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB42REVO00997057606456</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131574</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74445:14</InstrId>
+          <EndToEndId>PB:2022-02-01:74445</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">15.96</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>GKCCBEBB</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>TARFOUS-BOULBAN</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>BE47063875245280</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131575</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73828:15</InstrId>
+          <EndToEndId>PB:2022-02-01:73828</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">23.26</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>DEUTDEDB160</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Stefan Fischer</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE36120700240327266300</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131576</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74145:16</InstrId>
+          <EndToEndId>PB:2022-02-01:74145</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">17.59</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>INGDDEFFXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Kristina Kasparik</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE96500105175432176850</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131577</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:74123:17</InstrId>
+          <EndToEndId>PB:2022-02-01:74123</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">19.22</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>HABALV22</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Inga Zune</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>LV12HABA0551001765589</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131578</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73731:18</InstrId>
+          <EndToEndId>PB:2022-02-01:73731</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">14.42</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>INGBITD1</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>koi leo ian ioshi merz</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>IT14L0347501605CC0011449484</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131579</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73603:19</InstrId>
+          <EndToEndId>PB:2022-02-01:73603</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">23.26</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Stefano Onofri</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB56REVO00997084417392</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131580</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73599:20</InstrId>
+          <EndToEndId>PB:2022-02-01:73599</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">27.11</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>DORTDE33XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Gujer Kevin</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE18440501990132239126</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131581</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73486:21</InstrId>
+          <EndToEndId>PB:2022-02-01:73486</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">23.07</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOLT21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Ibrahim Basdemir</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>LT333250053451467295</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131582</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73474:22</InstrId>
+          <EndToEndId>PB:2022-02-01:73474</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">14.99</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>NTSBDEB1XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>CHTAINI Youness</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE58100110012622065134</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131583</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73445:23</InstrId>
+          <EndToEndId>PB:2022-02-01:73445</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">17.11</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Eleftheria Angelaki</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB41REVO00997045168358</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131584</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73391:24</InstrId>
+          <EndToEndId>PB:2022-02-01:73391</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">15.96</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>CELLLULL</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Sophie Loiseau</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>LU330141738296920000</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131585</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73362:25</InstrId>
+          <EndToEndId>PB:2022-02-01:73362</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">15.57</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>SOGEFRPP</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>AMEDAH</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>FR7630003039410005137606071</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131586</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73285:26</InstrId>
+          <EndToEndId>PB:2022-02-01:73285</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">58.83</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BYLADEM1001</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Lutz Pfaff</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE26120300001016434050</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131587</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73168:27</InstrId>
+          <EndToEndId>PB:2022-02-01:73168</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">14.42</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>PINGEON LORIS AMAEL</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB66REVO00997004838897</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131588</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:73024:28</InstrId>
+          <EndToEndId>PB:2022-02-01:73024</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">19.80</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Aleksandar Jovanovic</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB04REVO00997017137867</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131589</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72936:29</InstrId>
+          <EndToEndId>PB:2022-02-01:72936</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">14.42</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>NTSBDEB1XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Sandrine Burdet</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE83100110012620630442</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131590</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72740:30</InstrId>
+          <EndToEndId>PB:2022-02-01:72740</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">22.11</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Bojana Mijatovic</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB48REVO00997095162032</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131591</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72735:31</InstrId>
+          <EndToEndId>PB:2022-02-01:72735</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">17.49</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BPPIITRRXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Cognetti Johnny</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>IT67D0760105138221671921674</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131592</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72718:32</InstrId>
+          <EndToEndId>PB:2022-02-01:72718</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">19.22</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>PRNSFRP1</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>richard Elcie</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>FR7621833000010000868821968</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131593</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72666:33</InstrId>
+          <EndToEndId>PB:2022-02-01:72666</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">24.61</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>SPKHDE2HXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Michael Herden</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE62250501801910116971</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131594</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72641:34</InstrId>
+          <EndToEndId>PB:2022-02-01:72641</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">27.11</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>NORSDE51XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Daiva Zoll</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE21100777770375978400</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131595</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72331:35</InstrId>
+          <EndToEndId>PB:2022-02-01:72331</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">14.42</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Christian Charles Pfammatter</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB30REVO00997074717666</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131596</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72327:36</InstrId>
+          <EndToEndId>PB:2022-02-01:72327</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">34.60</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>NTSBDEB1XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>CHEVALLEY ARTHUR</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE70100110012621343141</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131597</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72313:37</InstrId>
+          <EndToEndId>PB:2022-02-01:72313</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">67.28</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BYLADEM1001</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Alexandre Nava</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE25120300001059430676</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131598</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72308:38</InstrId>
+          <EndToEndId>PB:2022-02-01:72308</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">17.88</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Eros grajcevci</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB47REVO00997046004293</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131599</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72850:39</InstrId>
+          <EndToEndId>PB:2022-02-01:72850</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">40.56</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>HYEEIT22XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Greta Garelli</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>IT60M36772223000EM001671823</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131600</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72835:40</InstrId>
+          <EndToEndId>PB:2022-02-01:72835</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">50.46</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOLT21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Elomata Hitoto</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>LT463250036661367491</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131601</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72293:41</InstrId>
+          <EndToEndId>PB:2022-02-01:72293</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">15.76</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOGB21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Linda Naoui</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>GB17REVO00997086690319</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131602</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72503:42</InstrId>
+          <EndToEndId>PB:2022-02-01:72503</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">14.42</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>NTSBDEB1XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Marcel Wiederkehr</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE91100110012627221836</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131603</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72481:43</InstrId>
+          <EndToEndId>PB:2022-02-01:72481</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">19.42</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>DEUTDEDB683</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Peter Rostetter</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE47683700240106923600</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131604</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72422:44</InstrId>
+          <EndToEndId>PB:2022-02-01:72422</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">33.07</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>CEKOCZPP</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Sandro Riedmann</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>CZ7903000000000286097935</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131605</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72373:45</InstrId>
+          <EndToEndId>PB:2022-02-01:72373</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">14.42</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>NTSBDEB1XXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Nadine Wiederkehr-Niederer</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>DE81100110012621141280</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131606</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72585:46</InstrId>
+          <EndToEndId>PB:2022-02-01:72585</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">15.57</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>REVOLT21</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Kevin Jascur</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>LT733250040346418345</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131607</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PB:2022-02-01:72553:47</InstrId>
+          <EndToEndId>PB:2022-02-01:72553</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">25.38</InstdAmt>
+        </Amt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BBPIPTPL</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>BPI Banco Portugues de Investimento</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>PT50001000004385346000172</IBAN>
+          </Id>
+          <Ccy>EUR</Ccy>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Meinungsplatz 1131608</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>

@@ -1,0 +1,4 @@
+
+<!ENTITY page_login SYSTEM "page_login.json" >
+<!ENTITY page_logout SYSTEM "page_logout.json" >
+<!ENTITY page_debug_bar SYSTEM "page_debug_bar.json" >

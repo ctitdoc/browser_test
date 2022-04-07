@@ -1,0 +1,7 @@
+"page_login": {
+        "url": "&url_prefix;",
+        "titleContains": "Meinungsplatz",
+        "username":"&member_login;",
+        "password":"Azertyu1",
+        "xpath_to_click": "//*[@id='_submit']"
+        }

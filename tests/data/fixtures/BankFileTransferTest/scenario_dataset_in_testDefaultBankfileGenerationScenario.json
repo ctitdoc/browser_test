@@ -1,0 +1,28 @@
+[
+  {
+    "bo_url_prefix": "&url_prefix_bo_ch;",
+    "country" : "ch",
+    "bo_user_login": "&default_bo_user_login;",
+    "bo_user_password": "&default_bo_user_password;",
+    "bank_file_to_send_dir": "&bank_file_to_send_dir_ch;",
+    "bank_file_sent_dir": "&bank_file_sent_dir_ch;"
+  },
+  {
+    "bo_url_prefix": "&url_prefix_bo_de;",
+    "country" : "de",
+    "bo_user_login": "&default_bo_user_login;",
+    "bo_user_password": "&default_bo_user_password;",
+    "bank_file_to_send_dir": "&bank_file_to_send_dir_de;",
+    "bank_file_sent_dir": "&bank_file_sent_dir_de;"
+
+  },
+  {
+    "bo_url_prefix": "&url_prefix_bo_at;",
+    "country" : "at",
+    "bo_user_login": "&default_bo_user_login;",
+    "bo_user_password": "&default_bo_user_password;",
+    "bank_file_to_send_dir": "&bank_file_to_send_dir_at;",
+    "bank_file_sent_dir": "&bank_file_sent_dir_at;"
+
+  }
+]

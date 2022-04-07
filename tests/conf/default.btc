@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE json [
+        <!--
+        For a test with firefox browser : set in this entity your firefox profile directory,
+        example : <!ENTITY profile "/home/testp1/.mozilla/firefox/fsueawmh.default">
+        Unless a specific setup, it should be the directory <home>/.mozilla/firefox/xxxxxx.default
+        where xxxxxx is a random string.
+        You can also have a look at this post : https://askubuntu.com/questions/239543/get-the-default-firefox-profile-directory-from-bash
+        -->
+        <!ENTITY profile "/home/parallels/.mozilla/firefox/29ledvp6.default-esr">
+        ]>
+<json>
+    {
+      "browserName" : "firefox",
+      "moz:firefoxOptions": {
+    <!-- profile parameter should always be set as first parameter to ensure assert  on this parameter works -->
+        "args": ["-profile", "&profile;"],
+        "log": {
+          "level": "trace"
+        }
+      }
+    }
+</json>

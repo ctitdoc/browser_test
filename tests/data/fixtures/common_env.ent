@@ -1,0 +1,11 @@
+<!-- entities commonly used in test fixtures that are not managed in git -->
+
+        <!-- tester should configure his/her test email here otherwise test will fail -->
+        <!ENTITY email "f.delahaye+mpz@bilendi.com">
+        <!ENTITY default_bo_user_login "f.delahaye">
+        <!ENTITY default_bo_user_password "s797A9rAUWVmC">
+
+        <!-- dir where apps are deployed by default -->
+        <!ENTITY app_deploy_dir "/home/parallels/dev/apps">
+        <!-- mpz app deploy dir -->
+        <!ENTITY mpz_deploy_dir "&app_deploy_dir;/mpi">

@@ -1,0 +1,164 @@
+{
+  "page_home": {
+    "url": "&url_prefix;",
+    "titleContains": "Meinungsplatz",
+    "xpath_input_value": {
+      "xpath": "//*[@id='home_logout_email']",
+      "value": "&member_email;"
+    },
+    "xpath_to_click": "//*[@id='home_logout_submit']"
+  },
+  "catchup_help": "skip page_home and call instead page_login entity(and comment/uncomment the corresponding page_ method calls in the Test script), skip then proper steps below",
+  &page_debug_bar;,
+  "page_registration_step_1": {
+
+
+    "titleContains": "Meinungsplatz",
+    "xpath_input_values": [
+      {
+        "xpath": "//*[@id='step1_civility_0']/parent::label",
+        "check": true
+      },
+      {
+        "xpath": "//*[@id='step1_dateOfBirth']",
+        "value": "&member_date_of_birth;"
+      },
+      {
+        "xpath": "//*[@id='step1_firstName']",
+        "value": "&member_first_name;"
+      },
+      {
+        "xpath": "//*[@id='step1_lastName']",
+        "value": "&member_last_name;"
+      },
+      {
+        "xpath": "//*[@id='step1_plainPassword_password']",
+        "value": "&member_password;"
+      },
+      {
+        "xpath": "//*[@id='step1_plainPassword_passwordConfirm']",
+        "value": "&member_password;"
+      },
+      {
+        "xpath": "//*[@id='step1_address1']",
+        "value": "&member_address_1;"
+      },
+      {
+        "xpath": "//*[@id='step1_address2']",
+        "value": "&member_address_2;"
+      },
+      {
+        "xpath": "//*[@id='select2-step1_address_country-container']",
+        "check": true
+      },
+      {
+        "xpath": "//div[@class='country-dropdown-container']//input",
+        "value": "&member_address_country;"
+      },
+      {
+        "xpath": "//*[@id='select2-step1_address_country-results']/li[1]",
+        "check": true
+      },
+      {
+        "xpath": "//*[@id='select2-step1_address_zipcode-container']",
+        "check": true
+      },
+      {
+        "xpath": "//span[@class='select2-search select2-search--dropdown']//input",
+        "value": "&member_address_zipcode;"
+      },
+      {
+        "xpath": "//ul[@id='select2-step1_address_zipcode-results']/li[1]",
+        "check": true,
+        "poll": true
+      }
+    ]
+  },
+  "page_registration_step_1_wait_for_city": {
+
+    "number_of_seconds": 10
+  },
+  "page_registration_step_1_continue": {
+
+    "xpath_input_values": [
+      {
+        "xpath": "//*[@id='step1_address_city']",
+        "value": "&member_address_city;"
+      },
+      {
+        "xpath": "//*[@id='step1_mobileNumber_number']",
+        "value": "&member_mobile;"
+      },
+      {
+        "xpath": "//*[@id='step1_acceptance_termsAndConditions']",
+        "check": true
+      }
+    ],
+    "xpath_to_click": "//button[@type='submit']"
+  },
+  "page_registration_step_2": {
+    "xpath_input_values": [
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_0_answer\"]",
+        "check": true
+      },
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_0_answer\"]/option[9]",
+        "check": true
+      },
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_1_answer\"]",
+        "check": true
+      },
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_1_answer\"]/option[8]",
+        "check": true
+      },
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_2_answer_2\"]",
+        "check": true
+      },
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_4_answer\"]",
+        "value": "05/04/2016"
+      },
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_5_answer_0\"]",
+        "check": true
+      },
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_6_answer\"]",
+        "value": "07/06/2019"
+      },
+      {
+        "xpath": "//*[@id=\"qualification_currentPage_questions_7_answer_1\"]",
+        "check": true
+      }
+    ],
+    "xpath_to_click": "//*[@id=\"next\"]"
+  },
+  "page_confirm_email" : {
+    "xpath_to_click": "//a[contains(@href,'fo-registration-default/confirm-your-email') and contains(@class,'resend-link')]"
+  },
+  "page_gmail": {
+    "url": "&gmail_url;",
+    "titleContains": "Inbox",
+    "xpath_input_value": {
+      "xpath": "//*[@id='aso_search_form_anchor']//input[@type='text'][1]",
+      "value": "to:&member_email;",
+      "enter": true
+    }
+  },
+  "page_gmail_result": {
+    "xpath_to_click": "//div[@role='main']//div[@class='at' and @title='&member_email;']"
+  },
+  "page_gmail_mail": {
+    "xpath_of_href": "//a[contains(@href,'fo-registration-default')]"
+  },
+  "page_home_back": {
+    "xpath_to_click": "&fo_member_menu_selector;",
+    "double_wait": true,
+    "move_to_click": true
+  },
+  &page_logout;
+}

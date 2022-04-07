@@ -1,0 +1,38 @@
+{
+  &page_login;,
+  &page_debug_bar;,
+  "page_home": {
+    "titleContains": "Meinungsplatz",
+    "xpath_to_click": "&fo_member_menu_selector;",
+    "move_to_click": true
+  },
+  "page_member_menu": {
+    "titleContains": "Meinungsplatz",
+    "xpath_to_click": "//a[@href='/account/personal-information']"
+  },
+  "page_personnal_data": {
+    "titleContains": "Meinungsplatz",
+    "xpath_to_click": "//a[@href='/account/unsubscribe']"
+  },
+  "page_unsubscribe": {
+    "titleContains": "Meinungsplatz",
+    "xpath_input_values": [
+      {
+        "xpath": "//*[@id='unsubscribe_currentpassword']",
+        "value": "&member_password;"
+      },
+      {
+        "xpath": "//*[@id='unsubscribe_reasonToUnsubscribe']",
+        "check": true
+      },
+      {
+        "xpath": "//option[@value='other_reason']",
+        "check": true
+      }
+    ],
+    "xpath_to_click": "//*[@id='unsubscribe_button']"
+  },
+  "page_unsubscribe_confirm": {
+    "xpath_to_click": "//*[@id='confirmSubmit']"
+  }
+}

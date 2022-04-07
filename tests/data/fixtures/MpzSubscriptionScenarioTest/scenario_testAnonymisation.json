@@ -1,0 +1,7 @@
+{
+  "cron_anonymize": {
+    "member_email": "&member_email;",
+    "country": "&country;",
+    "command": "APPLICATION_COUNTRY=%s &mpz_deploy_dir;/bin/console bilendi:member:anonymize-closed-account -vvv --commit %s"
+  }
+}

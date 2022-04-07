@@ -1,0 +1,51 @@
+{
+  "page1_1": {
+    "url": "&url_acceuil;",
+    <!-- the test use titleContains to check that the title of the page contains this keyword -->
+    "titleContains": "Accueil",
+    "ui": "card_ui1",
+    "birth_day": "12",
+    "birth_month": "9",
+    "birth_year": "1976"
+  },
+  "page1_2": {
+    "titleContains": "Parrainage",
+    "sponsorship": "false",
+    "offerId": "440"
+  },
+  "page2": {
+    "titleContains": "Abonné",
+    <!-- for Mr civility put 1 or Mrs put 2 -->
+    "civility": "2",
+    "lastname": "DONCOEUR",
+    "firstname": "Matthieu",
+    "mobile" : "0646404694",
+    "email" : "&email;",
+    "streetNumber" : "5",
+    <!-- Rue has id 1 -->
+    "streetTypeId" : "1",
+    "streetName" : "du test sur ticket 38660",
+    "zipCode" : "75017",
+    "city" : "PARIS",
+    <!-- France has id 1 -->
+    "countryId" : "1"
+  },
+  "page3": {
+    "titleContains": "Payeur",
+    <!-- payment type 1 should be dbt but to be verified -->
+    "paymentType": "1",
+    "subscriberIsPayer": "true"
+  },
+  "page4": {
+    "titleContains": "Récapitulatif"
+  },
+  "page5": {
+    "titleContains": "Paiement"
+  },
+  "page6": {
+    "titleContains": "Signature"
+  },
+  "page6_2": {
+    "titleContains": "Confirmation"
+  }
+}

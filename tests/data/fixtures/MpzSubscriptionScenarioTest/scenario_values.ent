@@ -1,0 +1,17 @@
+
+        <!ENTITY url_prefix "&url_prefix_fo_ch;">
+        <!ENTITY country "ch">
+
+        <!ENTITY member_email "f.delahaye+test_subscr10@bilendi.com">
+        <!ENTITY member_login "&member_email;">
+        <!ENTITY member_date_of_birth "13/02/1992">
+        <!ENTITY member_first_name "Tom">
+        <!ENTITY member_last_name "TestTUF">
+        <!ENTITY member_password "&default_fo_user_password;">
+        <!ENTITY member_password "&default_fo_user_password;">
+        <!ENTITY member_address_1 "1 rue du TUF Test">
+        <!ENTITY member_address_2 "Batiment 2">
+        <!ENTITY member_address_country "Suisse">
+        <!ENTITY member_address_zipcode "1201">
+        <!ENTITY member_address_city "Genève">
+        <!ENTITY member_mobile "765391383">

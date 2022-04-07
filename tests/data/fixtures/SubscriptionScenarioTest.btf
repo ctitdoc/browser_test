@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE json [
+        <!ENTITY % common_entities SYSTEM "common.ent">
+        %common_entities;
+
+        <!-- birth date fields used in several page scénarios -->
+        <!ENTITY birth_date_fields '
+        "birth_day": "19",
+        "birth_month": "1",
+        "birth_year": "1990"
+'>
+        <!-- senario_1 is the default/basic contract ceation scenario with default options/subscription -->
+        <!ENTITY senario_1 SYSTEM "SubscriptionScenarioTest/senario_1.json">
+
+        <!-- scenario_2 is a reproduction of bug reported in ticket #47516 / cmt #25 / list item 3 :
+        pdf contract checkbox checked in empty payer section -->
+        <!ENTITY senario_2 SYSTEM "SubscriptionScenarioTest/senario_2.json">
+        ]>
+<json>
+    {
+    "keep_browser":true,
+    "step_by_step" : true,
+    "senarios" : ["senario_1"],
+    "senario_1" : &senario_1;
+    }
+</json>

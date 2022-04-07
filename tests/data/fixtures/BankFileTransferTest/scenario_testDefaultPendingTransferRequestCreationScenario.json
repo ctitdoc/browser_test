@@ -1,0 +1,24 @@
+{
+  &page_login;,
+  "page_dashboard": {
+    "titleContains": "Meinungsplatz",
+    "xpath_to_click": "//ul[@class='main-nav']//a[@href='/account/bank-details']"
+  },
+  "page_bank_details": {
+    "titleContains": "Meinungsplatz",
+    "xpath_to_click": "//*[@id='request-transfer-link']"
+  },
+  "page_request_transfer": {
+    "transfer_request_amount":"&credit_amount;",
+    "xpath_to_click": "//button[@name='confirm']"
+  },
+  "page_bank_details_check": {
+    "titleContains": "Meinungsplatz",
+    "assert_xpath_input_value": {
+      "xpath":"//input[@id='app_bundle_transfer_request_type_amount']",
+      "value":"&credit_amount_with_decimal;"
+    },
+    "xpath_to_click": "&fo_member_menu_selector;"
+  },
+&page_logout;
+}

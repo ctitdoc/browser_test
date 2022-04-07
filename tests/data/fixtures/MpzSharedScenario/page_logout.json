@@ -1,0 +1,3 @@
+"page_logout": {
+"xpath_to_click": "//a[@href='/logout']"
+}

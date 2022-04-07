@@ -1,0 +1,31 @@
+<!-- scenario_values : see https://redmine.bilendi.com/issues/72924#note-27 -->
+
+<!-- fo scenario -->
+
+        <!ENTITY url_prefix "#url_prefix#">
+
+        <!ENTITY member_login "#member_login#">
+
+        <!ENTITY idmembre "#idmembre#">
+
+        <!ENTITY iban "#iban#">
+
+        <!ENTITY bic "#bic#">
+
+        <!ENTITY credit_amount "#credit_amount#">
+
+        <!ENTITY credit_amount_with_decimal "#credit_amount_with_decimal#">
+
+
+<!-- bo scenario -->
+
+        <!ENTITY bo_url_prefix "#bo_url_prefix#">
+
+        <!ENTITY bo_user_login "#bo_user_login#">
+
+        <!ENTITY bo_user_password "#bo_user_password#">
+
+        <!ENTITY bank_file_to_send_dir "#bank_file_to_send_dir#">
+
+        <!ENTITY bank_file_sent_dir_ch "#bank_file_sent_dir_ch#">
+

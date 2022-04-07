@@ -1,0 +1,17 @@
+{
+    "require": {
+        "phpunit/phpunit": "^9.5",
+        "php-webdriver/webdriver": "^1.12",
+        "se/selenium-server-standalone": "^3.141"
+    },
+    "autoload": {
+        "psr-4": {
+            "MpzSharedScenario\\": "tests/MpzSharedScenario",
+            "TestCommon\\":"tests/testcommon"
+        }
+    },
+  "require-dev": {
+    "ext-pdo": "*",
+    "ext-json": "*"
+  }
+}
