@@ -1,9 +1,9 @@
 <!-- entities commonly used in test fixtures that are not managed in git -->
 
         <!-- tester should configure his/her test email here otherwise test will fail -->
-        <!ENTITY email "f.delahaye+mpz@bilendi.com">
-        <!ENTITY default_bo_user_login "f.delahaye">
-        <!ENTITY default_bo_user_password "s797A9rAUWVmC">
+        <!ENTITY email "ctitdoc@gmail.com">
+        <!ENTITY default_bo_user_login "itdoc">
+        <!ENTITY default_bo_user_password "itdoc">
 
         <!-- dir where apps are deployed by default -->
         <!ENTITY app_deploy_dir "/home/parallels/dev/apps">
