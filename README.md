@@ -22,8 +22,17 @@
 
 ## To deploy firefox driver (aka geckodriver)
 
+- ... if firefox is not installed, just do it;
+- if you have installed a "recent" firefox release (let's say around or above version 111), there are chances geckodriver is installed by default :
+- check it by running :
+```
+  > geckodriver --version
+  geckodriver 0.32.2 ( 2023-03-10)
+  ...
+```
+- if it is not already installed then :
 - install/upgrade geckodriver for linux arm 64 bit processors: get it from https://launchpad.net/ubuntu/bionic/arm64/firefox-geckodriver;
-- or install/upgrade geckodriver for other available os/processors: get it from https://github.com/mozilla/geckodriver/releases/download;
+- or install/upgrade geckodriver for other available os/processors: get it from https://github.com/mozilla/geckodriver/releases;
 - grab the last stable release for your os and check compliance with your firefox browser release otherwise upgrade or downgrade your browser or your driver;
 - install it in your os;
 - test the install by checking the result of "geckodriver --help";
