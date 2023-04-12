@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE json [
+
+        <!-- see comment of this element in BankFileTransferTest.btf as this element plays the same role. -->
+
+        <!ELEMENT json (#PCDATA)>
+
+        <!-- see comment of this SYSTEM parameter xml entity in BankFileTransferTest.btf as this plays the same role here.
+        -->
+        <!ENTITY % common_entities SYSTEM "obmc_fo.ent">
+        %common_entities;
+
+        <!-- see comment of this env related entities in BankFileTransferTest.btf as this plays the same role here.
+        -->
+        <!ENTITY % common_env_entities SYSTEM "common_env.ent">
+        %common_env_entities;
+
+        <!-- see comment of this SYSTEM parameter xml entity in BankFileTransferTest.btf as this plays the same role here. -->
+        <!ENTITY % scenario_values SYSTEM "OBMCLeadsScenarioTest/scenario_values.ent">
+        %scenario_values;
+
+        <!-- scenario_testSubscription : scenario of test method testSubscription (see also comment of a similar scenario_testXXX entity
+        in BankFileTransferTest.btf as this plays the same role here.) -->
+        <!ENTITY scenario_testCallMeBack SYSTEM "OBMCLeadsScenarioTest/scenario_testCallMeBack.json">
+
+
+        ]>
+<json>
+    {
+    "step_by_step" : false,
+<!--    "dsn" : {
+              "dbcon_mpz_at":"&dbcon_mpz_at;",
+              "dbcon_mpz_ch":"&dbcon_mpz_ch;",
+              "dbcon_mpz_de":"&dbcon_mpz_de;"
+            }, -->
+    "scenarios" : [],
+    <!-- see comment of a similar scenario_testXXX entry in BankFileTransferTest.btf as this plays the same role here. -->
+    "scenario_testCallMeBack" : &scenario_testCallMeBack;
+    }
+</json>

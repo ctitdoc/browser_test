@@ -1,0 +1,56 @@
+{
+  "page_home": {
+    "url": "&url_prefix;",
+    "titleContains": "BYmyCAR",
+    "xpath_to_click": "//*[@id='nav-primary-my-occasion']"
+  },
+  "page_vignettes": {
+    "titleContains": "recherche",
+    "xpath_to_click": "//*[contains(@class,'ais-Hits-item ')][8]//a"
+  },
+  "page_vehicle": {
+    "descr" : "date just before this click should be stored in $fixtures['page_vehicle']['date_click'] with format d/m/Y H:i",
+    "descr" : "the calculated phone value should be stored as 'phone_value' key to be reused after",
+    "xpath_input_value": {
+      "descr" : "this phone value is generated from the current time and day of month to ensure unique phone numbers on a day period in salesforce leads listing",
+      "descr" : "it starts with 01 to ensure a 'good' french phone value then adds the current time's second, minute, hour and day of month",
+      "descr" : "given by the result of php function date('01siHd')",
+      "xpath": "//aside[@u-none='md,sm']//*[@id='tel-on-vous-rappelle']",
+      "value": "date_format://01siHd"
+    },
+    "xpath_to_click": "//aside[@u-none='md,sm']//*[@id='sendCallback']"
+  },
+  "page_wait_lead_creation": {
+    "descr" : "let's wait a minute to ensure creation of the salesforce lead is completed...",
+    "number_of_seconds": 30
+  },
+  "page_salesforce": {
+    "url": "&salesforce_url;",
+    "titleContains": "Salesforce",
+    "xpath_input_values": [
+      {
+        "xpath": "//*[@id=\"username\"]",
+        "value": "&default_salesforce_login;"
+      },
+      {
+        "xpath": "//*[@id=\"password\"]",
+        "value": "&default_salesforce_password;"
+      }
+    ],
+    "xpath_to_click": "//*[@id=\"Login\"]"
+  },
+  "page_salesforce_leads" : {
+    "descr" : "displays list of leads to be checked",
+    "url" : "&salesforce_leads_url;"
+  },
+  "page_salesforce_leads_last_row_with_phone_date_check" : {
+    "descr" : "gets the date of the first tr of leads listing, with phone_value calculated at page_vehicle step, but with format +33xxxxxxxxx instead of 0xxxxxxxxx (as salesforce reformat these phone numbers this way) :",
+    "descr" : "//table[@data-aura-class='uiVirtualDataTable'][1]//tr[contains(.//*[contains(@class,'forceOutputPhone') ],'+33123456789')][1]//span[@data-aura-class='uiOutputDateTime']/text()",
+    "descr" : "then asserts that this date is same or after $fixtures['page_vehicle']['date_click']",
+    "descr" : "NB : {$param1} in the xpath below should be replaced with the calculated and properly formated phone_value described above",
+    "xpath_to_get" : "//table[@data-aura-class='uiVirtualDataTable'][1]//tr[contains(.//*[contains(@class,'forceOutputPhone') ],'+33{$param1}')][1]//span[@data-aura-class='uiOutputDateTime']"
+  },
+  "page_salesforce_logout" : {
+    "url" : "&salesforce_logout_url;"
+  }
+}

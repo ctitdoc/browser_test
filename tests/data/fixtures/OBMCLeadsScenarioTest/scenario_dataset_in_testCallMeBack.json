@@ -1,0 +1,17 @@
+[
+  {
+    "url_prefix": "&url_prefix_fo_de;",
+    "country" : "de",
+    "member_email": "f.delahaye@bymycar.fr",
+    "member_date_of_birth": "13/02/1992",
+    "member_first_name": "Tom",
+    "member_last_name": "TestTUF",
+    "member_password": "&default_fo_user_password;",
+    "member_address_1": "1 rue du TUF Test",
+    "member_address_2": "Batiment 2",
+    "member_address_country": "Suisse",
+    "member_address_zipcode": "1201",
+    "member_address_city": "Genève",
+    "member_mobile": "765391383"
+  }
+]

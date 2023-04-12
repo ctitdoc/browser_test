@@ -6,6 +6,9 @@ use Facebook\WebDriver\Exception\NoSuchElementException;
 use Facebook\WebDriver\Exception\StaleElementReferenceException;
 use Facebook\WebDriver\Exception\TimeoutException;
 use Facebook\WebDriver\Exception\WebDriverCurlException;
+use Facebook\WebDriver\Firefox\FirefoxOptions;
+use Facebook\WebDriver\Firefox\FirefoxProfile;
+use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\RemoteWebElement;
 use Facebook\WebDriver\WebDriverExpectedCondition;
@@ -27,25 +30,49 @@ class BrowserTest extends TestCase
 
     protected $normalizeCurrencyDecimal;
 
+    protected $formatDate;
+
+
     public function __construct(?string $name = null, array $data = [], $dataName = '')
     {
+        date_default_timezone_set('Europe/Paris');
         parent::__construct($name, $data, $dataName);
-
         $this->normalizeCurrencyDecimal = function (?string $moneyValue) {
             return (empty($moneyValue)) ? $moneyValue : str_replace([',', '.'], '.', $moneyValue);
+        };
+
+        $this->formatDate = function (?string $valueOrDateFormat) {
+            return
+                (!empty($valueOrDateFormat) && str_starts_with($valueOrDateFormat,'date_format://')) ?
+                    date(str_replace('date_format://', '', $valueOrDateFormat))
+                    :
+                    $valueOrDateFormat ;
         };
 
     }
 
     private function _setDriver()
     {
-        $this->webDriver = RemoteWebDriver::create('http://127.0.0.1:4444/wd/hub', $this->capabilities);
+        //$this->webDriver = RemoteWebDriver::create('http://127.0.0.1:4444', $this->capabilities);
+        $this->webDriver = RemoteWebDriver::create('http://127.0.0.1:4444', DesiredCapabilities::firefox());
     }
 
     public function setDefaultWebDriver()
     {
-        $this->capabilities = BrowserConf::get('default.btc');
-        $this->assertNotEmpty(BrowserConf::getProfile($this->capabilities), BrowserConf::getNonConfiguredProfileMessage());
+
+        $capabilitesSettings = BrowserConf::get('default.btc');
+        $profilePath = BrowserConf::getProfile($capabilitesSettings);
+        $this->assertNotEmpty($profilePath, BrowserConf::getNonConfiguredProfileMessage());
+        //let's set firefox as the default testing browser ...
+        if (BrowserConf::getBrowserName($capabilitesSettings)=='firefox') {
+            $firefoxOptions = new FirefoxOptions();
+            $profile = new FirefoxProfile();
+            $profile->setPreference('profile', $profilePath);
+            $firefoxOptions->setProfile($profile);
+            $firefoxOptions->addArguments(BrowserConf::getBrowserArgs($capabilitesSettings));
+            $this->capabilities = DesiredCapabilities::firefox();
+            $this->capabilities->setCapability(FirefoxOptions::CAPABILITY, $firefoxOptions);
+        }
         $this->_setDriver();
     }
 
@@ -137,6 +164,7 @@ class BrowserTest extends TestCase
         } catch (WebDriverCurlException $e) {
             $this->webDriver->get($url);
         }
+        return $this;
     }
 
     protected function pollCheckChoice($fixtures)
@@ -170,7 +198,7 @@ class BrowserTest extends TestCase
     }
 
 
-    protected function xpathInputValue($fixtures, $fillIsMandatory = true, $normaliseFunction = null)
+    protected function xpathInputValue(&$fixtures, $fillIsMandatory = true, $normaliseFunction = null)
     {
         if ($fillIsMandatory || !empty($fixtures['xpath_input_value'])) {
             $inputElt = $this->waitForXpathElt($fixtures["xpath_input_value"]["xpath"]);
@@ -178,6 +206,7 @@ class BrowserTest extends TestCase
                 $inputElt->clear();
                 $toFillValue = (!empty($normaliseFunction)) ? $normaliseFunction($fixtures["xpath_input_value"]['value']) : $fixtures["xpath_input_value"]['value'];
                 $inputElt->sendKeys($toFillValue ); //. WebDriverKeys::RETURN_KEY);
+                $fixtures["xpath_input_value"]['calculated_value'] = $toFillValue;
             }
             if (!empty($fixtures["xpath_input_value"]['check'])) {
                 $inputElt->click();
@@ -188,6 +217,8 @@ class BrowserTest extends TestCase
             if (!empty($fixtures["xpath_input_value"]['enter'])) {
                 $this->webDriver->getKeyboard()->sendKeys(WebDriverKeys::RETURN_KEY);
             }
+        } else {
+            return null;
         }
     }
 
@@ -195,7 +226,8 @@ class BrowserTest extends TestCase
     {
         if ($fillIsMandatory || !empty($fixtures['xpath_input_values'])) {
             foreach ($fixtures['xpath_input_values'] as $inputValue) {
-                $this->xpathInputValue(['xpath_input_value' => $inputValue]);
+                $fixture = ['xpath_input_value' => $inputValue];
+                $this->xpathInputValue($fixture);
             }
         }
 
@@ -312,7 +344,12 @@ class BrowserTest extends TestCase
     {
         if ($this->skip($fixtures)) return $this;
 
-        $this->assertPageTitle($fixtures, $assertTitleIsMandatory);
+        if (!empty($fixtures['url'])) {
+            $this->gotoUrl($fixtures['url']);
+            $this->webDriver->wait()->until(WebDriverExpectedCondition::titleContains($fixtures['titleContains']));
+        } else {
+            $this->assertPageTitle($fixtures, $assertTitleIsMandatory);
+        }
 
         $this->assertXpathInputValue($fixtures, $assertInputIsMandatory, $normaliseInputValueFunction);
 
@@ -334,7 +371,7 @@ class BrowserTest extends TestCase
         return $this;
     }
 
-    protected function page_fill($fixtures, $assertTitleIsMandatory = false, $fillInputIsMandatory = true, $normaliseInputValueFunction = null)
+    protected function page_fill(&$fixtures, $assertTitleIsMandatory = false, $fillInputIsMandatory = true, $normaliseInputValueFunction = null)
     {
         if ($this->skip($fixtures)) return $this;
 

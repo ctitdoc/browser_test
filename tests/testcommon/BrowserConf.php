@@ -23,11 +23,27 @@ class BrowserConf
         {
             if (!empty($capabilities['moz:firefoxOptions']))
             {
-                return $capabilities['moz:firefoxOptions']['args'][1];
+                return $capabilities['moz:firefoxOptions']['profile'];
             }
             return null;
         }
         return null;
+    }
+    public static function getBrowserName($capabilities) {
+        return $capabilities['browserName'];
+    }
+
+    public static function getBrowserArgs($capabilities)
+    {
+        if (!empty($capabilities))
+        {
+            if (!empty($capabilities['moz:firefoxOptions']))
+            {
+                return $capabilities['moz:firefoxOptions']['args'];
+            }
+            return [];
+        }
+        return [];
     }
 
     public static function getNonConfiguredProfileMessage()

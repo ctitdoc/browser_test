@@ -1,0 +1,47 @@
+<!-- entities commonly used in test fixtures -->
+
+        <!ENTITY url_prefix_fo_ch "bymycar:BMC-DEV-2019@https://febymycar-pprod.bymycar.ch">
+        <!ENTITY url_prefix_bo_ch "bymycar:BMC-DEV-2019@https://febowww.bymycar.fr">
+        <!ENTITY url_prefix_fo_de "https://bymycar:BMC-DEV-2019@febymycar-pprod.bymycar.fr">
+        <!ENTITY url_prefix_fo_de "http://local.bymycar.fr">
+        <!ENTITY url_prefix_bo_de "bymycar:BMC-DEV-2019@https://febowww.bymycar.fr">
+        <!ENTITY url_prefix_fo_at "bymycar:BMC-DEV-2019@https://febymycar-pprod.bymycar.at">
+        <!ENTITY url_prefix_bo_at "bymycar:BMC-DEV-2019@https://febowww.bymycar.fr">
+
+        <!ENTITY default_fo_user_password "Azertyu1">
+
+        <!ENTITY database_host_at "localhost">
+        <!ENTITY database_name_at "dbmpz_at">
+        <!ENTITY database_host_ch "localhost">
+        <!ENTITY database_name_ch "dbmpz_ch">
+        <!ENTITY database_host_de "localhost">
+        <!ENTITY database_name_de "dbmpz_de">
+        <!ENTITY database_host_common "localhost">
+        <!ENTITY database_name_common "dbmpz_common">
+        <!ENTITY database_user "mpz_web">
+        <!ENTITY database_password 'Ly2xa@3[5JdVdrN'>
+        <!ENTITY database_port "5431">
+
+        <!ENTITY dbcon_mpz_at "pgsql:host=&database_host_at;;port=&database_port;;dbname=&database_name_at;;user=&database_user;;password=&database_password;">
+        <!ENTITY dbcon_mpz_ch "pgsql:host=&database_host_ch;;port=&database_port;;dbname=&database_name_ch;;user=&database_user;;password=&database_password;">
+        <!ENTITY dbcon_mpz_de "pgsql:host=&database_host_de;;port=&database_port;;dbname=&database_name_de;;user=&database_user;;password=&database_password;">
+
+
+        <!ENTITY bank_file_to_send_dir_ch "/home/shared/mpz/dev/ch/private/bank/credit-transfer-files/to-send">
+        <!ENTITY bank_file_sent_dir_ch "/home/shared/mpz/dev/ch/private/bank/credit-transfer-files/sent">
+        <!ENTITY bank_file_to_send_dir_de "/home/shared/mpz/dev/de/private/bank/credit-transfer-files/to-send">
+        <!ENTITY bank_file_sent_dir_de "/home/shared/mpz/dev/de/private/bank/credit-transfer-files/sent">
+        <!ENTITY bank_file_to_send_dir_at "/home/shared/mpz/dev/at/private/bank/credit-transfer-files/to-send">
+        <!ENTITY bank_file_sent_dir_at "/home/shared/mpz/dev/at/private/bank/credit-transfer-files/sent">
+
+        <!-- to access gmail in test scenarios -->
+
+        <!ENTITY gmail_url "https://mail.google.com">
+
+        <!-- to access salesforce in test scenarios -->
+
+        <!ENTITY salesforce_url "https://bymycar--rec062021.sandbox.lightning.force.com/lightning/page/home">
+        <!ENTITY default_salesforce_login "w.moraud@bymycar.fr.bmc.rec062021">
+        <!ENTITY default_salesforce_password "Challes@2023">
+        <!ENTITY salesforce_leads_url "https://bymycar--rec062021.sandbox.lightning.force.com/lightning/o/Lead/list?filterName=00B1x000005A5ASEA0">
+        <!ENTITY salesforce_logout_url "https://bymycar--rec062021.sandbox.lightning.force.com/secur/logout.jsp">

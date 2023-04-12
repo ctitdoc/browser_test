@@ -14,7 +14,8 @@
       "browserName" : "firefox",
       "moz:firefoxOptions": {
     <!-- profile parameter should always be set as first parameter to ensure assert  on this parameter works -->
-        "args": ["-profile", "&profile;"],
+        "profile" : "&profile;",
+        "args": [],
         "log": {
           "level": "trace"
         }
