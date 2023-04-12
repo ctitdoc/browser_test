@@ -1,0 +1,17 @@
+
+        <!ENTITY url_prefix "#url_prefix#">
+        <!ENTITY country "#country#">
+
+        <!ENTITY member_email "#member_email#">
+        <!ENTITY member_login "&member_email;">
+        <!ENTITY member_date_of_birth "#member_date_of_birth#">
+        <!ENTITY member_first_name "#member_first_name#">
+        <!ENTITY member_last_name "#member_last_name#">
+        <!ENTITY member_password "#member_password#">
+        <!ENTITY member_password "#member_password#">
+        <!ENTITY member_address_1 "#member_address_1#">
+        <!ENTITY member_address_2 "#member_address_2#">
+        <!ENTITY member_address_country "#member_address_country#">
+        <!ENTITY member_address_zipcode "#member_address_zipcode#">
+        <!ENTITY member_address_city "#member_address_city#">
+        <!ENTITY member_mobile "#member_mobile#">
