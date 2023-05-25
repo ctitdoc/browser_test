@@ -6,6 +6,7 @@
         Unless a specific setup, it should be the directory <home>/.mozilla/firefox/xxxxxx.default
         where xxxxxx is a random string.
         You can also have a look at this post : https://askubuntu.com/questions/239543/get-the-default-firefox-profile-directory-from-bash
+        In the args array option below, add "-headless" to run tests without displaying the browser window.
         -->
         <!ENTITY profile "/home/parallels/.mozilla/firefox/29ledvp6.default-esr">
         ]>

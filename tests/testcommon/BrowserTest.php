@@ -53,8 +53,8 @@ class BrowserTest extends TestCase
 
     private function _setDriver()
     {
-        //$this->webDriver = RemoteWebDriver::create('http://127.0.0.1:4444', $this->capabilities);
-        $this->webDriver = RemoteWebDriver::create('http://127.0.0.1:4444', DesiredCapabilities::firefox());
+        $this->webDriver = RemoteWebDriver::create('http://127.0.0.1:4444', $this->capabilities);
+        //$this->webDriver = RemoteWebDriver::create('http://127.0.0.1:4444', DesiredCapabilities::firefox());
     }
 
     public function setDefaultWebDriver()
