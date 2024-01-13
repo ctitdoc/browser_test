@@ -28,7 +28,7 @@
 ## To deploy firefox driver (aka geckodriver)
 
 - if firefox is not installed, just install the current stable version (older versions may not work and versions before 111 won't work);
-- check geckodriver (so firefox native web driver) is here :
+- check that geckodriver (so firefox native web driver) is installed and ok:
 ```
   > geckodriver --version
   geckodriver 0.32.2 ( 2023-03-10)
@@ -53,7 +53,7 @@ test execution at a time  of a locally deployed browser.
 (NB : this has not been tested yet, you are welcome !)
 
 - if chromium is not installed, just install the current stable version (older versions befor 120 may not work);
-- check geckodriver (so firefox native web driver) is here :
+- check that chromium.chromedriver (so chromium native web driver) is installed and ok:
 ```
   > chromium.chromedriver --version
   ChromeDriver 120.0.6099.216 (c89e9d30198bc4e9e7711e2b90b9602cdd50e448-refs/branch-heads/6099@{#1720})
