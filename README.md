@@ -1,3 +1,7 @@
+**NB:**
+- the main branch is not up-to-date to deploy and use browser_test, but the old_bmc branch is (so use this one for now);
+- this will be fixed in a near future.
+
 # Understanding the basic concepts of this "web driver based" testing framework
 
 - "web driver" is a standardized API supported by unit testing solutions and browser solutions of the market;
