@@ -2,11 +2,27 @@
   "page_home": {
     "url": "&url_prefix;",
     "titleContains": "BYmyCAR",
+    "xpath_to_click": "//*[@class='sd-cmp-uD1oW']//*[@class='sd-cmp-2nUXb']",
+    "click_optional": true
+  },
+  "page_certif": {
+    "xpath_to_click": "//*[@id=\"advancedButton\"]",
+    "click_optional": true
+  },
+  "page_wait_certif_valid_btn": {
+    "descr" : "let's wait a few seconds for the certif valid btn to be available (= displayed and enabled)...",
+    "number_of_seconds": 10
+  },
+  "page_certif_valid": {
+    "xpath_to_click": "//*[@id=\"exceptionDialogButton\"]",
+    "click_optional": true
+  },
+  "page_occasions": {
     "xpath_to_click": "//*[@id='nav-primary-my-occasion']"
   },
   "page_vignettes": {
     "titleContains": "recherche",
-    "xpath_to_click": "//*[contains(@class,'ais-Hits-item ')][8]//a"
+    "xpath_to_click": "//*[contains(@class,'ais-Hits-item ')][9]//a"
   },
   "page_vehicle": {
     "descr" : "date just before this click should be stored in $fixtures['page_vehicle']['date_click'] with format d/m/Y H:i",
@@ -15,10 +31,10 @@
       "descr" : "this phone value is generated from the current time and day of month to ensure unique phone numbers on a day period in salesforce leads listing",
       "descr" : "it starts with 01 to ensure a 'good' french phone value then adds the current time's second, minute, hour and day of month",
       "descr" : "given by the result of php function date('01siHd')",
-      "xpath": "//aside[@u-none='md,sm']//*[@id='tel-on-vous-rappelle']",
+      "xpath": "//*[@id='tel-on-vous-rappelle']",
       "value": "date_format://01siHd"
     },
-    "xpath_to_click": "//aside[@u-none='md,sm']//*[@id='sendCallback']"
+    "xpath_to_click": "//*[@id='sendCallback']"
   },
   "page_wait_lead_creation": {
     "descr" : "let's wait a minute to ensure creation of the salesforce lead is completed...",

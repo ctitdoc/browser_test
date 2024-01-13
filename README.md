@@ -1,7 +1,8 @@
 
 **NB :** 
-- this README is not up-to-date with the current releases of the integrated components (php webdriver, selenium web driver, and native browser webdrivers);
-- it will be fixed in the near future.
+- the main branch is not up-to-date to deploy and use browser_test, but the old_bmc branch is
+(so use this one for now);
+- this will be fixed in a near future.
 
 # Understanding the basic concepts of this "web driver based" testing framework
 
@@ -20,51 +21,57 @@
 
 # To deploy this testing framework
 
-- this section describes a local deploy, that is, all components are executed by the computer running the browser (other deploy configuration may be worked out and be added if needed, check the docs in the "Reference docs" section below);
-- clone this repo and run "composer install" : this deploys (in vendor) : the php web driver package, phpunit, and selenimu server;
+- this section describes a local Ubuntu deploy, that is, all components are executed by the computer running the browser (other deploy configuration may be worked out and be added if needed, check the docs in the "Reference docs" section below);
+- clone this repo and run "composer install" : this deploys (in vendor) : the php web driver package and phpunit;
 - NB : the current java stable release has to be deployed as selenium server is a java server;
-- the last (but not least) component(s) to deploy is(are) the browser(s) native driver(s) : this is described below;
 
 ## To deploy firefox driver (aka geckodriver)
 
-- ... if firefox is not installed, just do it;
-- if you have installed a "recent" firefox release (let's say around or above version 111), there are chances geckodriver is installed by default :
-- check it by running :
+- if firefox is not installed, just install the current stable version (older versions may not work and versions before 111 won't work);
+- check geckodriver (so firefox native web driver) is here :
 ```
   > geckodriver --version
   geckodriver 0.32.2 ( 2023-03-10)
   ...
 ```
-- if it is not already installed then :
-- install/upgrade geckodriver for linux arm 64 bit processors: get it from https://launchpad.net/ubuntu/bionic/arm64/firefox-geckodriver;
-- or install/upgrade geckodriver for other available os/processors: get it from https://github.com/mozilla/geckodriver/releases;
-- grab the last stable release for your os and check compliance with your firefox browser release otherwise upgrade or downgrade your browser or your driver;
-- install it in your os;
-- test the install by checking the result of "geckodriver --help";
-- the webdriver server can then be run from selenium repo root, with the following command :
+ 
+- the webdriver server can then be run from the repo root, with the following command :
 
 ```
-java -Dwebdriver.gecko.driver=./geckodriver.sh -jar vendor/se/selenium-server-standalone/bin/selenium-server-standalone.jar standalone
+java -Dwebdriver.gecko.driver="/bin/geckodriver" -jar ./selenium/selenium-server-4.16.1.jar  standalone
 ```
+
+*update /bin/geckodriver if it is not the correct path of this program by running 'which geckodriver'*
 
 - check for any error returned by this server in its console;
 
-## To deploy chrome driver
+NB: running only /bin/geckodriver without the java server should also work, but is limited to a single
+test execution at a time  of a locally deployed browser.
+
+## To deploy chromium driver
 
 (NB : this has not been tested yet, you are welcome !)
 
-- install/upgrade chromedriver for linux arm 64 bit processors: get it from https://launchpad.net/ubuntu/bionic/arm64/chromium-chromedriver;
-- install/upgrade chromedriver for other available os/processors: get it from https://github.com/mozilla/geckodriver/releases/download;
-- grab the last stable release for your os and check compliance with your firefox browser release otherwise upgrade or downgrade your browser or you driver;
-- install it in your os;
-- test the install by checking the result of "chromedriver --help";
-- the webdriver server can then be run from selenium repo root, with the following command :
+- if chromium is not installed, just install the current stable version (older versions befor 120 may not work);
+- check geckodriver (so firefox native web driver) is here :
+```
+  > chromium.chromedriver --version
+  ChromeDriver 120.0.6099.216 (c89e9d30198bc4e9e7711e2b90b9602cdd50e448-refs/branch-heads/6099@{#1720})
+  >
+```
+
+- the webdriver server can then be run from the repo root, with the following command :
 
 ```
-java -Dwebdriver.chrome.driver=./chromedriver.sh -jar vendor/se/selenium-server-standalone/bin/selenium-server-standalone.jar standalone
+java -Dwebdriver.chrome.driver="/snap/bin/chromium.chromedriver" -jar ./selenium/selenium-server-4.16.1.jar  standalone
 ```
+
+*update /snap/bin/chromium.chromedriver if it is not the correct path of this program by running 'which chromium.chromedriver'*
 
 - check for any error returned by this server in its console;
+
+NB: running only /snap/bin/chromium.chromedriver without the java server should also work, but is limited to a single
+test execution at a time  of a locally deployed browser.
 
 # To code and run phpunit+webdriver test scripts
 

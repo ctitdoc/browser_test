@@ -2,10 +2,11 @@
 
 namespace TestCommon;
 
+use Facebook\WebDriver\Exception\InsecureCertificateException;
+use Facebook\WebDriver\Exception\Internal\WebDriverCurlException;
 use Facebook\WebDriver\Exception\NoSuchElementException;
 use Facebook\WebDriver\Exception\StaleElementReferenceException;
 use Facebook\WebDriver\Exception\TimeoutException;
-use Facebook\WebDriver\Exception\WebDriverCurlException;
 use Facebook\WebDriver\Firefox\FirefoxOptions;
 use Facebook\WebDriver\Firefox\FirefoxProfile;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
@@ -68,6 +69,7 @@ class BrowserTest extends TestCase
             $firefoxOptions = new FirefoxOptions();
             $profile = new FirefoxProfile();
             $profile->setPreference('profile', $profilePath);
+            $profile->setPreference('accept_untrusted_certs', true);
             $firefoxOptions->setProfile($profile);
             $firefoxOptions->addArguments(BrowserConf::getBrowserArgs($capabilitesSettings));
             $this->capabilities = DesiredCapabilities::firefox();
@@ -157,12 +159,14 @@ class BrowserTest extends TestCase
         return $this;
     }
 
-    protected function gotoUrl($url)
+    protected function gotoUrl($url, &$status = true)
     {
         try {
             $this->webDriver->get($url);
         } catch (WebDriverCurlException $e) {
             $this->webDriver->get($url);
+        } catch (InsecureCertificateException $e) {
+            $status = $e;
         }
         return $this;
     }
@@ -345,30 +349,51 @@ class BrowserTest extends TestCase
         if ($this->skip($fixtures)) return $this;
 
         if (!empty($fixtures['url'])) {
-            $this->gotoUrl($fixtures['url']);
-            $this->webDriver->wait()->until(WebDriverExpectedCondition::titleContains($fixtures['titleContains']));
+             $pageReturnStatus = true;
+             $this->gotoUrl($fixtures['url'], $pageReturnStatus);
+            if ($this->isRequestedPageReturned($pageReturnStatus, $fixtures['url'])) {
+                $this->webDriver->wait()->until(WebDriverExpectedCondition::titleContains($fixtures['titleContains']));
+            }
         } else {
             $this->assertPageTitle($fixtures, $assertTitleIsMandatory);
         }
 
         $this->assertXpathInputValue($fixtures, $assertInputIsMandatory, $normaliseInputValueFunction);
 
-        if (!empty($fixtures['xpath_of_href'])) {
-            //$attempts = 0;
-            //while ($attempts < 10) {
-            $elt = $this->waitForXpathElt($fixtures['xpath_of_href']);
-            $href=null;
-            try {
-                $href = $elt->getAttribute('href');
+        try {
+            if (!empty($fixtures['xpath_of_href'])) {
+                //$attempts = 0;
+                //while ($attempts < 10) {
+                $elt = $this->waitForXpathElt($fixtures['xpath_of_href']);
+                $href = null;
+                try {
+                    $href = $elt->getAttribute('href');
                 } catch (StaleElementReferenceException $e) {
                 }
-            $this->gotoUrl($href);
+                $this->gotoUrl($href);
 
-       } else {
+            } else {
+                $this->makeClick($fixtures);
+            }
+        } catch (TimeoutException | InsecureCertificateException $e) {
+            if (empty($fixtures['click_optional'])) {
+                throw $e;
+            }
+        }
+        return $this;
+    }
+
+    protected function page_click($fixtures)
+    {
+        if (!empty($fixtures['optional'])) {
+            try {
+                $this->makeClick($fixtures);
+            } catch (TimeoutException $e) {
+
+            }
+        } else {
             $this->makeClick($fixtures);
         }
-
-        return $this;
     }
 
     protected function page_fill(&$fixtures, $assertTitleIsMandatory = false, $fillInputIsMandatory = true, $normaliseInputValueFunction = null)
@@ -421,5 +446,11 @@ class BrowserTest extends TestCase
     protected function getDbCon($fixtures, $country) : ?PDO
     {
         return $fixtures['dbcon']["dbcon_mpz_$country"];
+    }
+
+    private function isRequestedPageReturned($pageReturnStatus, $url)
+    {
+        if ($pageReturnStatus instanceof InsecureCertificateException) return false;
+        return true;
     }
 }

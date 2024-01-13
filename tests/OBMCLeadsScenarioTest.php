@@ -44,6 +44,10 @@ class OBMCLeadsScenarioTest extends BrowserTest
             if (empty($dataSetIn[$dataSetInIndex]['skip'])) {
                 $this
                     ->page_nav($scenario['page_home'])
+                    ->page_nav($scenario['page_certif'])
+                    ->page_wait($scenario['page_wait_certif_valid_btn'])
+                    ->page_nav($scenario['page_certif_valid'])
+                    ->page_nav($scenario['page_occasions'])
                     ->page_nav($scenario['page_vignettes'])
                     ->page_vehicle($scenario['page_vehicle'])
                     ->page_wait($scenario['page_wait_lead_creation'])

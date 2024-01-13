@@ -2,13 +2,16 @@
 <!DOCTYPE json [
         <!--
         For a test with firefox browser : set in this entity your firefox profile directory,
-        example : <!ENTITY profile "/home/testp1/.mozilla/firefox/fsueawmh.default">
-        Unless a specific setup, it should be the directory <home>/.mozilla/firefox/xxxxxx.default
+        example : <!ENTITY profile "/home/franck/.mozilla/firefox/hvea6ko0.default">
+        to get the list of profiles used or usable by the local firefox config of your account:
+        open firefox and run  the url : about:profiles
+        or by defaul: a default profile should exist in a directory <home>/.mozilla/firefox/xxxxxx.default
         where xxxxxx is a random string.
         You can also have a look at this post : https://askubuntu.com/questions/239543/get-the-default-firefox-profile-directory-from-bash
+
         In the args array option below, add "-headless" to run tests without displaying the browser window.
         -->
-        <!ENTITY profile "/home/parallels/.mozilla/firefox/29ledvp6.default-esr">
+        <!ENTITY profile "/home/franck/snap/firefox/common/.mozilla/firefox/qt5rc0hu.default-release">
         ]>
 <json>
     {
@@ -16,6 +19,8 @@
       "moz:firefoxOptions": {
     <!-- profile parameter should always be set as first parameter to ensure assert  on this parameter works -->
         "profile" : "&profile;",
+        <!-- to switch between test with/without head(window) display, switch the "args" lines comment : -->
+        <!-- "args": ["-headless"], -->
         "args": [],
         "log": {
           "level": "trace"

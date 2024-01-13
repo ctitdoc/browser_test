@@ -1,8 +1,7 @@
 {
     "require": {
         "phpunit/phpunit": "^9.5",
-        "php-webdriver/webdriver": "^1.12",
-        "se/selenium-server-standalone": "^3.141"
+        "php-webdriver/webdriver": "^1.12"
     },
     "autoload": {
         "psr-4": {
