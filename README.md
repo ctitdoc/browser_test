@@ -1,3 +1,8 @@
+
+**NB :** 
+- this README is not up-to-date with the current releases of the integrated components (php webdriver, selinium web driver, and native browser webdrivers);
+- it will be fixed in the near future.
+
 # Understanding the basic concepts of this "web driver based" testing framework
 
 - "web driver" is a standardized API supported by unit testing solutions and browser solutions of the market;
@@ -39,7 +44,7 @@
 - the webdriver server can then be run from selenium repo root, with the following command :
 
 ```
-java -Dwebdriver.gecko.driver=./geckodriver.sh -jar vendor/se/selenium-server-standalone/bin/selenium-server-standalone.jar -debug
+java -Dwebdriver.gecko.driver=./geckodriver.sh -jar vendor/se/selenium-server-standalone/bin/selenium-server-standalone.jar standalone
 ```
 
 - check for any error returned by this server in its console;
@@ -56,7 +61,7 @@ java -Dwebdriver.gecko.driver=./geckodriver.sh -jar vendor/se/selenium-server-st
 - the webdriver server can then be run from selenium repo root, with the following command :
 
 ```
-java -Dwebdriver.chrome.driver=./chromedriver.sh -jar vendor/se/selenium-server-standalone/bin/selenium-server-standalone.jar -debug
+java -Dwebdriver.chrome.driver=./chromedriver.sh -jar vendor/se/selenium-server-standalone/bin/selenium-server-standalone.jar standalone
 ```
 
 - check for any error returned by this server in its console;
