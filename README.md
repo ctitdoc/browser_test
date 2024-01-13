@@ -1,6 +1,6 @@
 
 **NB :** 
-- this README is not up-to-date with the current releases of the integrated components (php webdriver, selinium web driver, and native browser webdrivers);
+- this README is not up-to-date with the current releases of the integrated components (php webdriver, selenium web driver, and native browser webdrivers);
 - it will be fixed in the near future.
 
 # Understanding the basic concepts of this "web driver based" testing framework
