@@ -1,6 +1,6 @@
 <?php
 
-use TestCommon\BrowserTest;
+use PHPUnit\Framework\TestCase;
 use TestCommon\DocumentProcessor\DocumentProcessor;
 
 /**
@@ -16,14 +16,8 @@ use TestCommon\DocumentProcessor\DocumentProcessor;
  * deployed.
  *
  */
-class DocumentProcessorTest extends BrowserTest
+class DocumentProcessorTest extends TestCase
 {
-    use MpzSharedScenario\MpzSharedScenarioTrait;
-
-    protected $fixtures;
-
-    protected $testStates = array();
-
     public function setUp(): void
     {
     }
