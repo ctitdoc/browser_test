@@ -13,7 +13,7 @@ use TestCommon\DocumentProcessor\DocumentProcessor;
  * One can look at the testVebolia method, that demonstrates a transformation of an xml file in the shoppingfeed XML
  * format test1.xml, into an xml file in the verbolia XML format, using a $categories php array parameter to access
  * a label in different languages (es => spanish or ca => catalan).
- * To run this test, one has to adapt the path of $xmlFile, $xsltFile, $xmlResultFile to the path wher this repo is
+ * To run this test, one has to adapt the path of $xmlFile, $xsltFile, $xmlResultFile to the path where this repo is
  * deployed.
  *
  */
@@ -28,7 +28,7 @@ class DocumentProcessorTest extends TestCase
     }
 
     /*
-     * as XSLTProcessor outputs <xsl:message... as php warnings, so let's disable phpunit's default error handling
+     * as XSLTProcessor outputs <xsl:message... as php warnings, let's disable phpunit's default error handling
      * which stops the execution at first warning...
      */
     #[WithoutErrorHandler]
@@ -43,7 +43,7 @@ class DocumentProcessorTest extends TestCase
         $categories['es'] = 'Tipo de vehiculo';
         $categories['ca'] = 'Tipa de vehicula';
 
-        //in debug mode all bi:log(..) message calls should be displayed in console,
+        //in debug mode all xsl script's bi:log(..) message calls should be displayed in console,
         //replace debug by error to get only error level messages;
         //one can also play with info and warning log levels, see logging.xsl/bi:log() function.
         $processor->processDocumentWithObject($xmlFile, $xsltFile, $categories, false, 'debug', $xmlResultFile);
