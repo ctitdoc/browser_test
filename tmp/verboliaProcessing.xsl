@@ -14,6 +14,11 @@
 
     <xsl:import href="../tests/testcommon/Xml2ObjectTransformer/xml_2_object.xsl"/>
 
+    <!-- defines output as XML and configure elements whose text content should be surrounded by CDATA sections to avoid
+    text content conflicts with XML text syntax -->
+    <xsl:output method="XML"
+                cdata-section-elements="id title url salePrice imageUrl brand category quantityInStock type value"/>
+
     <xsl:template match="/">
         <channel>
             <xsl:apply-templates select="catalog/products/product"/>
@@ -34,9 +39,6 @@
             <salePrice>
                 <xsl:value-of select="price"/>
             </salePrice>
-            <originalPrice>
-                <xsl:value-of select="price"/>
-            </originalPrice>
             <imageUrl>
                 <xsl:value-of select="images/image[@type='main']"/>
             </imageUrl>
