@@ -5,7 +5,7 @@
                 xmlns:func="http://exslt.org/functions"
                 xmlns:str="http://exslt.org/strings"
                 xmlns:dyn="http://exslt.org/dynamic"
-                xmlns:bi="http://www.bilendi.com/xslFunctions"
+                xmlns:bi="http://www.ithis.com/xslFunctions"
                 extension-element-prefixes="func bi"
 >
 
@@ -128,6 +128,43 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:message><xsl:value-of select="'xsl function bi:array() in xml_2_object.xsl : is called with too much parameters : number of parameters coded in this function can be increased if needed.'"/></xsl:message>
+            </xsl:otherwise>
+        </xsl:choose>
+    </func:function>
+
+    <func:function name="bi:array_value">
+        <!-- $objectId should be a multidimensional key/value array -->
+        <!-- param1 should be the number of key arguments -->
+        <xsl:param name="param1"/>
+        <!-- param2 to 5 should be keys. If one need more key arguments just add more param elements. -->
+        <!-- the function returns the value of these keys in $objectId array or an error if these keys do not exist in the array-->
+        <xsl:param name="param2"/>
+        <xsl:param name="param3"/>
+        <xsl:param name="param4"/>
+        <xsl:param name="param5"/>
+        <xsl:param name="param6"/>
+        <xsl:variable name="staticMethodName" select="concat($transformerClassName,'array_value')"/>
+        <xsl:choose>
+            <xsl:when test="$param1 = 0">
+                <func:result select="php:function ($staticMethodName,$objectId,$param1)"/>
+            </xsl:when>
+            <xsl:when test="$param1 = 1">
+                <func:result select="php:function ($staticMethodName,$objectId,$param1,$param2)"/>
+            </xsl:when>
+            <xsl:when test="$param1 = 2">
+                <func:result select="php:function ($staticMethodName,$objectId,$param1,$param2,$param3)"/>
+            </xsl:when>
+            <xsl:when test="$param1 = 3">
+                <func:result select="php:function ($staticMethodName,$objectId,$param1,$param2,$param3,$param4)"/>
+            </xsl:when>
+            <xsl:when test="$param1 = 4">
+                <func:result select="php:function ($staticMethodName,$objectId,$param1,$param2,$param3,$param4,$param5)"/>
+            </xsl:when>
+            <xsl:when test="$param1 = 5">
+                <func:result select="php:function ($staticMethodName,$objectId,$param1,$param2,$param3,$param4,$param5,$param6)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message><xsl:value-of select="'xsl function bi:array_value() in xml_2_object.xsl : is called with too much parameters : number of parameters coded in this function can be increased if needed.'"/></xsl:message>
             </xsl:otherwise>
         </xsl:choose>
     </func:function>

@@ -2,6 +2,8 @@
 
 namespace TestCommon\Xml2ObjectTransformer;
 
+use Exception;
+
 /**
  *   - This class implements a simple xsl based xml data binding framework;
  *   - It can be used to import xml files in db, and/or load them as specific objects and/or php arrays etc...;
@@ -45,7 +47,7 @@ class Xml2ObjectTransformer
      * and DocumentProcessorTest::testProcessDocumentWithObject for a live usage example.
      */
     public static function buildObject(string $fileLocation, string $xslFileLocation, object $objectToBuild,
-                                       string $logLevel = 'error', string $multipleDocElement = null) {
+                                       string $logLevel = 'error', string $multipleDocElement = null, $uri = null) {
 /*
         $documentSet= <<<EOB
 <?xml version="1.0" encoding="UTF-8"?>
@@ -84,7 +86,7 @@ EOB;*/
                 }
 
             }
-            self::buildObjectFromDOM($document, $xslFileLocation, $objectToBuild, $logLevel);
+            self::buildObjectFromDOM($document, $xslFileLocation, $objectToBuild, $logLevel, $uri);
         } finally {
             libxml_use_internal_errors(false);
         }
@@ -92,7 +94,7 @@ EOB;*/
 
 
     public static function buildObjectFromDOM(\DOMDocument $document, string $xslFileLocation, object $objectToBuild,
-                                       string $logLevel = 'error')
+                                       string $logLevel = 'error', $uri = null)
     {
         try {
             if (empty($objectToBuild)) {
@@ -111,7 +113,11 @@ EOB;*/
             $proc->setParameter('', 'globalLogLevel', $logLevel);
             $proc->setParameter('', 'objectId', $objectId);
             $proc->importStyleSheet($xsldoc);
-            $proc->transformToXML($document);
+            if (empty($uri)) {
+                $proc->transformToXML($document);
+            } else {
+                $proc->transformToUri($document, $uri);
+            }
             unset(self::$_objectToBuildRegister[$objectId]);
         } catch (Exception $e) {
             if (isset($objectId)) {
@@ -139,6 +145,20 @@ EOB;*/
             $arrayParam[$key] = $value;
         }
          self::callMethod($objectId, $methodName, $arrayParam);
+    }
+
+    public static function array_value()
+    {
+        $params = func_get_args();
+        $objectId = array_shift($params);
+        $keyCount = array_shift($params);
+        $object = self::$_objectToBuildRegister[$objectId];
+        $result = $object;
+        for ($i=0;$i<$keyCount;$i++) {
+            $key = array_shift($params);
+            $result = $result[$key];
+        }
+        return $result;
     }
 
 }

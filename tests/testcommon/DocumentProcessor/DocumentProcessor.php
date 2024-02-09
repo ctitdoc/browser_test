@@ -26,15 +26,15 @@ class DocumentProcessor implements DocumentProcessorInterface
      * @param Object $object : the object the xsl script takes as parameter (and call its methods) to process the document.
      * see DocumentProcessorTest::testProcessDocumentWithObject for a live usage example.
      */
-    public function processDocumentWithObject(string $documentFilePath, string $xslFileRelativePath, object $object,
-                                              bool $isMultipleDocument = false, string $logLevel = 'info'): void
+    public function processDocumentWithObject(string $documentFilePath, string $xslFileRelativePath, object|array $object,
+                                              bool $isMultipleDocument = false, string $logLevel = 'info', $uri = null): void
     {
-        $xslFileAbsolutePath = $this->getXslFile($xslFileRelativePath);
+        $xslFileAbsolutePath = str_starts_with($xslFileRelativePath, '/')? $xslFileRelativePath : $this->getXslFile($xslFileRelativePath);
         Xml2ObjectTransformer::buildObject($documentFilePath,
             $xslFileAbsolutePath,
             $object,
             $logLevel,
-            ($isMultipleDocument) ? 'DocumentSet' : null);
+            ($isMultipleDocument) ? 'DocumentSet' : null, $uri);
     }
 
     /**

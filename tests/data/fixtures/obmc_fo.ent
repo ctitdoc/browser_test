@@ -40,8 +40,9 @@
 
         <!-- to access salesforce in test scenarios -->
 
-        <!ENTITY salesforce_url "https://bymycar--rec062021.sandbox.lightning.force.com/lightning/page/home">
-        <!ENTITY default_salesforce_login "w.moraud@bymycar.fr.bmc.rec062021">
+        <!ENTITY salesforce_url "https://bymycar--rec04.sandbox.lightning.force.com/lightning/page/home">
+        <!ENTITY default_salesforce_login "integration-it.api@bymycar.fr.bmc.rec04">
         <!ENTITY default_salesforce_password "Challes@2023">
-        <!ENTITY salesforce_leads_url "https://bymycar--rec062021.sandbox.lightning.force.com/lightning/o/Lead/list?filterName=00B1x000005A5ASEA0">
-        <!ENTITY salesforce_logout_url "https://bymycar--rec062021.sandbox.lightning.force.com/secur/logout.jsp">
+        <!-- recent leads listing -->
+        <!ENTITY salesforce_leads_url "https://bymycar--rec04.sandbox.my.salesforce.com/006/o?hotlist_mode=2">
+        <!ENTITY salesforce_logout_url "https://bymycar--rec04.sandbox.my.salesforce.com/secur/logout.jsp">
