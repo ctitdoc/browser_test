@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\Attributes\WithoutErrorHandler;
 use PHPUnit\Framework\TestCase;
 use TestCommon\DocumentProcessor\DocumentProcessor;
 
@@ -26,6 +27,11 @@ class DocumentProcessorTest extends TestCase
     {
     }
 
+    /*
+     * as XSLTProcessor outputs <xsl:message... as php warnings, so let's disable phpunit's default error handling
+     * which stops the execution at first warning...
+     */
+    #[WithoutErrorHandler]
     public function testVerbolia()
     {
         $xmlFile = '/home/franck/dev/browser_test/tmp/test1.xml';
@@ -37,6 +43,9 @@ class DocumentProcessorTest extends TestCase
         $categories['es'] = 'Tipo de vehiculo';
         $categories['ca'] = 'Tipa de vehicula';
 
+        //in debug mode all bi:log(..) message calls should be displayed in console,
+        //replace debug by error to get only error level messages;
+        //one can also play with info and warning log levels, see logging.xsl/bi:log() function.
         $processor->processDocumentWithObject($xmlFile, $xsltFile, $categories, false, 'debug', $xmlResultFile);
 
     }

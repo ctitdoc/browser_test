@@ -1,6 +1,6 @@
 {
     "require": {
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": " ^10.5",
         "php-webdriver/webdriver": "^1.12"
     },
     "autoload": {
@@ -14,6 +14,6 @@
     "ext-json": "*",
     "ext-dom": "*",
     "ext-xsl": "*",
-    "ext-libxml",
+    "ext-libxml": "*"
   }
 }
