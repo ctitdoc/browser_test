@@ -319,28 +319,4 @@ limit 1; ")->fetch()['currency_exchange_rates'];
         echo "reversedChAmountWithoutMoneyDecimal : $reversedChAmountWithoutMoneyDecimal\n";
 
     }
-
-    public function testVerbolia()
-    {
-        $xmlFile = '/home/franck/dev/browser_test/tmp/test1.xml';
-        $xsltFile = '/home/franck/dev/browser_test/tmp/verboliaProcessing.xsl';
-        $xmlResultFile = '/home/franck/dev/browser_test/tmp/test1_out.xml';
-        $processor = new DocumentProcessor();
-        $categories = new \ArrayObject(array());
-/*        $categories['a7b317be-e86f-4524-bbab-f8ec9582110b']['es'] = 'Tipo de vehiculo';
-        $categories['a7b317be-e86f-4524-bbab-f8ec9582110b']['ca'] = 'Tipa de vehicula';
-        $categories['a7b317be-e86f-4524-bbab-f8ec9582110c']['es'] = 'Otro Tipo de vehiculo';
-        $categories['a7b317be-e86f-4524-bbab-f8ec9582110c']['ca'] = 'Otra Tipa de vehicula';*/
-
-        $categories['es'] = 'Tipo de vehiculo';
-        $categories['ca'] = 'Tipa de vehicula';
-        /*
-         $featureTraductions['Tipo de vehiculo'] = 'category';
-         $featureTraductions['Idiomes'] = 'lang';
-         $featureTraductions['Tipa de vehicula'] = 'category';
-         $featureTraductions['Idiomas'] = 'lang';
-         */
-        $processor->processDocumentWithObject($xmlFile, $xsltFile, $categories, false, 'debug', $xmlResultFile);
-
-    }
 }
